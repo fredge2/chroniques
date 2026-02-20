@@ -1,0 +1,225 @@
+:root {
+  --primary-color: #1a1a24; /* Bleu nuit profond */
+  --gold: #d4af37; /* Or pour le "fil d'or" */
+  --text-light: #f4f4f9;
+  --text-dark: #333;
+  --bg-light: #faf9f6; /* Blanc cassé parchemin */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--bg-light);
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(26, 26, 36, 0.95);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  color: var(--gold);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* Sections communes */
+.section {
+  min-height: 100vh;
+  padding: 100px 2rem 50px; /* Espace pour la nav fixe */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Accueil / Header */
+#accueil {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  background-image:
+    linear-gradient(rgba(26, 26, 36, 0.8), rgba(26, 26, 36, 0.9)),
+    url("https://images.unsplash.com/photo-1548625361-ec853fdf512b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"); /* Image d'architecture religieuse */
+  background-size: cover;
+  background-position: center;
+}
+
+#accueil h1 {
+  font-size: 4rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 2rem;
+  background-color: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  font-family: "Cinzel", serif;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--gold);
+  color: var(--primary-color);
+}
+
+/* Tomes */
+#tomes h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  flex: 1 1 300px;
+  border-top: 3px solid var(--gold);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* Symbole */
+.dark-bg {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.split {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  text-align: left;
+}
+
+.split h2 {
+  color: var(--gold);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.image-content {
+  flex: 1;
+  min-height: 400px;
+  background-image: url("https://images.unsplash.com/photo-1572973801202-b286f9172288?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"); /* Image de vitrail */
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.text-content {
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #0f0f15;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Animations JS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .split {
+    flex-direction: column;
+  }
+  nav ul {
+    display: none; /* Pour simplifier sur mobile */
+  }
+  #accueil h1 {
+    font-size: 2.5rem;
+  }
+}
