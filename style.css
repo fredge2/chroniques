@@ -1,9 +1,11 @@
+/* Palette "Cistercienne" : Dépouillement et lumière */
 :root {
-  --primary-color: #1a1a24; /* Bleu nuit profond */
-  --gold: #d4af37; /* Or pour le "fil d'or" */
-  --text-light: #f4f4f9;
-  --text-dark: #333;
-  --bg-light: #faf9f6; /* Blanc cassé parchemin */
+  --bg-color: #f9f8f6; /* Pierre blanche / Parchemin clair */
+  --text-color: #4a4238; /* Gris-brun doux pour le texte */
+  --primary-color: #6c5e50; /* Taupe plus foncé pour les titres */
+  --border-color: #e2dcd3; /* Ligne de séparation douce */
+  --accent-color: #8b7355; /* Marron chaud pour les boutons */
+  --white: #ffffff;
 }
 
 * {
@@ -14,9 +16,10 @@
 
 body {
   font-family: "Lora", serif;
-  color: var(--text-dark);
+  font-size: 14px; /* Contrainte respectée : 14px strictement */
   line-height: 1.6;
-  background-color: var(--bg-light);
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 h1,
@@ -24,202 +27,259 @@ h2,
 h3,
 .logo {
   font-family: "Cinzel", serif;
-  font-weight: 700;
+  color: var(--primary-color);
+  font-weight: 400;
 }
 
-/* Navigation */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(26, 26, 36, 0.95);
-  padding: 1rem 2rem;
+/* En-tête et Navigation */
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+  padding: 20px 50px;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
 .logo {
-  color: var(--gold);
-  font-size: 1.5rem;
+  font-size: 20px;
   letter-spacing: 2px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 20px;
 }
 
 nav a {
-  color: var(--text-light);
   text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+  font-size: 13px;
   text-transform: uppercase;
-  font-size: 0.9rem;
   letter-spacing: 1px;
-  transition: color 0.3s;
 }
 
-nav a:hover {
-  color: var(--gold);
+nav a:hover,
+nav a.active {
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
 }
 
-/* Sections communes */
-.section {
-  min-height: 100vh;
-  padding: 100px 2rem 50px; /* Espace pour la nav fixe */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Structure des pages (SPA) */
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  min-height: 70vh;
 }
 
-.content {
-  max-width: 1200px;
-  width: 100%;
-  text-align: center;
+.page {
+  display: none;
+  animation: fadeIn 0.6s ease;
 }
 
-/* Accueil / Header */
-#accueil {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  background-image:
-    linear-gradient(rgba(26, 26, 36, 0.8), rgba(26, 26, 36, 0.9)),
-    url("https://images.unsplash.com/photo-1548625361-ec853fdf512b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"); /* Image d'architecture religieuse */
-  background-size: cover;
-  background-position: center;
+.page.active {
+  display: block;
 }
 
-#accueil h1 {
-  font-size: 4rem;
-  color: var(--gold);
-  margin-bottom: 1rem;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .subtitle {
-  font-size: 1.5rem;
   font-style: italic;
-  margin-bottom: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+/* Accueil */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Saga */
+.intro-saga {
+  margin-bottom: 40px;
+}
+
+.img-float-right {
+  float: right;
+  max-width: 300px;
+  margin-left: 20px;
+  border-radius: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  clear: both;
+}
+
+.card {
+  background: var(--white);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 2px;
+}
+
+/* Symbole */
+.split {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: var(--white);
+  padding: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.split h2 {
+  margin-bottom: 20px;
+}
+
+.image-content img {
+  max-width: 350px;
+  border-radius: 100px 100px 0 0; /* Forme de vitrail */
+  border: 4px solid var(--bg-color);
+}
+
+/* Boutique */
+.shop-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.product {
+  background: var(--white);
+  padding: 30px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  width: 300px;
+}
+
+.product img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin: 15px 0;
 }
 
 .btn {
   display: inline-block;
-  padding: 15px 30px;
-  margin-top: 2rem;
-  background-color: transparent;
-  border: 2px solid var(--gold);
-  color: var(--gold);
+  padding: 10px 25px;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   text-decoration: none;
   font-family: "Cinzel", serif;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: var(--gold);
-  color: var(--primary-color);
-}
-
-/* Tomes */
-#tomes h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: var(--primary-color);
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.card {
-  background: white;
-  padding: 2rem;
-  border-radius: 5px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  flex: 1 1 300px;
-  border-top: 3px solid var(--gold);
-  text-align: left;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-/* Symbole */
-.dark-bg {
   background-color: var(--primary-color);
-  color: var(--text-light);
+  color: var(--white);
 }
 
-.split {
+/* Association / Formulaire */
+.contact-container {
   display: flex;
-  align-items: center;
-  gap: 4rem;
-  text-align: left;
+  gap: 40px;
+  margin-top: 30px;
+  background: var(--white);
+  padding: 40px;
+  border: 1px solid var(--border-color);
 }
 
-.split h2 {
-  color: var(--gold);
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.image-content {
+.contact-info {
   flex: 1;
-  min-height: 400px;
-  background-image: url("https://images.unsplash.com/photo-1572973801202-b286f9172288?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"); /* Image de vitrail */
-  background-size: cover;
-  background-position: center;
-  border-radius: 5px;
-  border: 2px solid rgba(212, 175, 55, 0.3);
 }
 
-.text-content {
+.contact-info img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  font-family: "Lora", serif;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 2rem;
-  background-color: #0f0f15;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-/* Animations JS */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .split {
-    flex-direction: column;
-  }
-  nav ul {
-    display: none; /* Pour simplifier sur mobile */
-  }
-  #accueil h1 {
-    font-size: 2.5rem;
-  }
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid var(--border-color);
+  font-size: 12px;
 }
