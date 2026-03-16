@@ -181,6 +181,7 @@ main {
 /* Boutique */
 .shop-grid {
   display: flex;
+  flex-wrap: wrap; /* Ajout crucial pour passer à la ligne */
   justify-content: center;
   gap: 50px;
   margin-top: 30px;
@@ -282,4 +283,56 @@ footer {
   margin-top: 40px;
   border-top: 1px solid var(--border-color);
   font-size: 12px;
+}
+
+/* --- NOUVEAUX ELEMENTS BOUTIQUE --- */
+.upcoming-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 25px 0;
+  text-align: left;
+}
+
+.upcoming-list li {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+
+.upcoming-list strong {
+  color: var(--primary-color);
+}
+
+.note {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--accent-color);
+}
+
+/* Mise en valeur de l'édition prestige */
+.product.prestige {
+  border: 2px solid var(--accent-color);
+  background-color: var(--white); 
+}
+
+.description-luxe {
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+/* Couleurs spécifiques pour les boutons */
+.btn-prestige {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border-color: var(--accent-color);
+}
+
+.btn-don {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-prestige:hover, .btn-don:hover {
+  opacity: 0.9;
 }
