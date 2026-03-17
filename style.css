@@ -336,3 +336,54 @@ footer {
 .btn-prestige:hover, .btn-don:hover {
   opacity: 0.9;
 }
+
+/* Style du bloc Association */
+.container-association {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.card-association {
+    background-color: #f9f7f2; /* Un ton crème léger */
+    border-left: 5px solid #8b0000; /* Un rouge sombre élégant */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.card-association h3 {
+    color: #8b0000;
+    margin-top: 0;
+    font-family: serif; /* Style plus classique */
+}
+
+.card-association p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-association {
+    display: inline-block;
+    background-color: #8b0000;
+    color: white !important;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-association:hover {
+    background-color: #a50000;
+    text-decoration: none;
+}
+
+/* Version mobile */
+@media (max-width: 600px) {
+    .card-association {
+        padding: 20px;
+    }
+}
