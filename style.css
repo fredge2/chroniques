@@ -388,3 +388,8 @@ footer {
         padding: 20px;
     }
 }
+
+/* Cache le champ honeypot pour les utilisateurs réels */
+.hidden {
+  display: none;
+}
