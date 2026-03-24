@@ -393,3 +393,29 @@ footer {
 .hidden {
   display: none;
 }
+
+/* --- PAGE MERCI COMMANDE --- */
+.merci_content {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+}
+
+.merci_content h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.steps_container {
+  text-align: left;
+  display: inline-block;
+  margin: 30px 0;
+  color: var(--primary-color);
+}
+
+.step_item {
+  margin-bottom: 10px;
+}
