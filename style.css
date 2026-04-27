@@ -419,3 +419,89 @@ footer {
 .step_item {
   margin-bottom: 10px;
 }
+
+
+/* =========================================
+   ADAPTATION MOBILE ET TABLETTE (RESPONSIVE)
+   ========================================= */
+
+/* Bouton Menu Burger (Caché sur ordinateur) */
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* --- ÉCRANS MOYENS (Tablettes et petits ordis) --- */
+@media (max-width: 900px) {
+  /* On empile les colonnes au lieu de les mettre côte à côte */
+  .hero, .split, .contact-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  /* Gestion de la barre du haut */
+  header {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  /* On fait apparaître le bouton Burger */
+  .burger-menu {
+    display: block;
+  }
+
+  /* On cache le menu par défaut */
+  nav {
+    width: 100%;
+    display: none; 
+  }
+
+  /* Classe qui sera ajoutée par le Javascript pour ouvrir le menu */
+  nav.active-menu {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+  }
+
+  /* Les images flottantes se recentrent proprement */
+  .img-float-right {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+}
+
+/* --- PETITS ÉCRANS (Smartphones) --- */
+@media (max-width: 600px) {
+  /* On réduit un peu la taille des titres pour que ça ne déborde pas */
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+
+  /* La carte de l'association et les produits prennent toute la largeur */
+  .product, .card-association {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  main {
+    margin: 15px auto;
+    padding: 0 10px;
+  }
+}
