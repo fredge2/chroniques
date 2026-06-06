@@ -117,6 +117,7 @@ main {
 }
 
 .hero-image img {
+  margin-top: 45px;
   max-width: 100%;
   border-radius: 4px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -314,7 +315,7 @@ footer {
 /* Mise en valeur de l'édition prestige */
 .product.prestige {
   border: 2px solid var(--accent-color);
-  background-color: var(--white); 
+  background-color: var(--white);
 }
 
 .description-luxe {
@@ -334,59 +335,60 @@ footer {
   color: var(--white);
 }
 
-.btn-prestige:hover, .btn-don:hover {
+.btn-prestige:hover,
+.btn-don:hover {
   opacity: 0.9;
 }
 
 /* Style du bloc Association */
 .container-association {
-    margin: 40px auto;
-    max-width: 800px;
-    padding: 0 20px;
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .card-association {
-    background-color: #f9f7f2; /* Un ton crème léger */
-    border-left: 5px solid #8b0000; /* Un rouge sombre élégant */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    text-align: center;
+  background-color: #f9f7f2; /* Un ton crème léger */
+  border-left: 5px solid #8b0000; /* Un rouge sombre élégant */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .card-association h3 {
-    color: #8b0000;
-    margin-top: 0;
-    font-family: serif; /* Style plus classique */
+  color: #8b0000;
+  margin-top: 0;
+  font-family: serif; /* Style plus classique */
 }
 
 .card-association p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .btn-association {
-    display: inline-block;
-    background-color: #8b0000;
-    color: white !important;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: #8b0000;
+  color: white !important;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .btn-association:hover {
-    background-color: #a50000;
-    text-decoration: none;
+  background-color: #a50000;
+  text-decoration: none;
 }
 
 /* Version mobile */
 @media (max-width: 600px) {
-    .card-association {
-        padding: 20px;
-    }
+  .card-association {
+    padding: 20px;
+  }
 }
 
 /* Cache le champ honeypot pour les utilisateurs réels */
@@ -420,7 +422,6 @@ footer {
   margin-bottom: 10px;
 }
 
-
 /* =========================================
    ADAPTATION MOBILE ET TABLETTE (RESPONSIVE)
    ========================================= */
@@ -439,7 +440,9 @@ footer {
 /* --- ÉCRANS MOYENS (Tablettes et petits ordis) --- */
 @media (max-width: 900px) {
   /* On empile les colonnes au lieu de les mettre côte à côte */
-  .hero, .split, .contact-container {
+  .hero,
+  .split,
+  .contact-container {
     flex-direction: column;
     text-align: center;
     gap: 30px;
@@ -459,7 +462,7 @@ footer {
   /* On cache le menu par défaut */
   nav {
     width: 100%;
-    display: none; 
+    display: none;
   }
 
   /* Classe qui sera ajoutée par le Javascript pour ouvrir le menu */
@@ -489,13 +492,14 @@ footer {
   h1 {
     font-size: 24px;
   }
-  
+
   h2 {
     font-size: 20px;
   }
 
   /* La carte de l'association et les produits prennent toute la largeur */
-  .product, .card-association {
+  .product,
+  .card-association {
     width: 100%;
     margin: 10px 0;
   }
