@@ -44,5 +44,12 @@
       <image:loc>https://oelenberg.fr/assets/chapelle_resultat.webp</image:loc>
       <image:title>L'Érudit</image:title>
     </image:image>
+
+    <!-- Nouvelle image : Épée -->
+    <image:image>
+      <image:loc>https://oelenberg.fr/assets/epee_resultat.webp</image:loc>
+      <image:title>Épée plantée dans la pierre</image:title>
+    </image:image>
+    
   </url>
 </urlset>
