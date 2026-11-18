@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Association Patrimoine Chrétien Vivant — Oelenberg</title>
+    <link rel="canonical" href="https://oelenberg.fr/association.html" />
+
+    <meta
+      name="description"
+      content="Rejoignez l'association Patrimoine Chrétien Vivant pour préserver la mémoire des monastères et abbayes d'Alsace autour du prieuré d'Oelenberg."
+    />
+    <meta name="author" content="Paul Silène" />
+
+    <meta
+      property="og:title"
+      content="Association Patrimoine Chrétien Vivant — Oelenberg"
+    />
+    <meta
+      property="og:description"
+      content="Participez à la sauvegarde du patrimoine monastique et à la diffusion des Chroniques d'Oelenberg."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://oelenberg.fr/association.html" />
+    <meta
+      property="og:image"
+      content="https://oelenberg.fr/assets/chapelle_resultat.webp"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Patrimoine Chrétien Vivant</div>
+      <button class="burger-menu" aria-label="Ouvrir le menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="saga.html">La Saga</a></li>
+          <li><a href="symbole.html">Le Symbole</a></li>
+          <li><a href="boutique.html">Boutique</a></li>
+          <li><a href="association.html" class="active">L'Association</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page">
+        <h1>Rejoignez l'Association « Patrimoine Chrétien Vivant »</h1>
+        <p class="subtitle">
+          Une association pour préserver la mémoire et la lumière de nos
+          monastères et abbayes.
+        </p>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <img
+              src="assets/chapelle_resultat.webp"
+              alt="Chapelle du prieuré d'Oelenberg — Association Patrimoine Chrétien Vivant"
+            />
+            <p>
+              En rejoignant notre association, vous participez activement à la
+              sauvegarde de notre patrimoine commun et à la diffusion des
+              Chroniques.
+            </p>
+          </div>
+
+          <form
+            class="contact-form"
+            name="inscription-amis"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/merci.html"
+          >
+            <input type="hidden" name="form-name" value="inscription-amis" />
+
+            <p class="hidden">
+              <label
+                >Ne pas remplir ce champ si vous êtes humain :
+                <input name="bot-field"
+              /></label>
+            </p>
+
+            <div class="form-group">
+              <label for="nom">Nom et Prénom :</label>
+              <input type="text" id="nom" name="nom" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse E-mail :</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Vos motivations ou questions :</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn">Envoyer ma demande</button>
+          </form>
+        </div>
+
+        <div class="container-association">
+          <div class="card-association">
+            <h3>Soutenez le Patrimoine</h3>
+            <p>
+              Découvrez les actions de l'association
+              <strong>Patrimoine Chrétien Vivant</strong> et participez à la
+              préservation de ces lieux remarquables.
+            </p>
+            <a
+              href="https://patrimoine-chretien-vivant.netlify.app"
+              class="btn-association"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Aller sur le site de l'Association →
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © 2026 Les Chroniques d'Oelenberg — Paul Silène. | Réalisation :
+        <a
+          href="https://fgcreation.eu"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="lien-fg"
+          >FG Création</a
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

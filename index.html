@@ -8,14 +8,13 @@
     </title>
     <link rel="canonical" href="https://oelenberg.fr/" />
 
-    <!-- Référencement Google (SEO) -->
     <meta
       name="description"
-      content="Plongez dans Les Chroniques d'Oelenberg de Paul Silène : une saga de romans historiques sur mille ans d'histoire en Alsace. Commandez les tomes en ligne."
+      content="Plongez dans Les Chroniques d'Oelenberg de Paul Silène : une saga de romans historiques sur mille ans d'histoire en Alsace. Découvrez l'œuvre et la boutique."
     />
     <meta name="author" content="Paul Silène" />
 
-    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <!-- Open Graph -->
     <meta
       property="og:title"
       content="Les Chroniques d'Oelenberg — Roman historique en Alsace"
@@ -44,93 +43,27 @@
       content="https://oelenberg.fr/assets/test.webp"
     />
 
-    <!-- Balises de géolocalisation et de ciblage local -->
+    <!-- Géolocalisation -->
     <meta name="geo.region" content="FR-68" />
     <meta name="geo.placename" content="Reiningue, Mulhouse, Alsace" />
     <meta name="geo.position" content="47.7472;7.2333" />
     <meta name="ICBM" content="47.7472, 7.2333" />
 
-    <!-- Mots-clés -->
-    <meta
-      name="keywords"
-      content="Oelenberg, abbaye d'Oelenberg, prieuré, Reiningue, Mulhouse, Alsace, roman historique, saga littéraire, Paul Silène, patrimoine chrétien, monastère"
-    />
-
-    <!-- Données structurées Google (Schema.org) -->
+    <!-- Données structurées -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "BookSeries",
-            "@id": "https://oelenberg.fr/#series",
-            "name": "Les Chroniques d'Oelenberg",
-            "author": {
-              "@type": "Person",
-              "name": "Paul Silène"
-            },
-            "genre": "Roman historique",
-            "inLanguage": "fr",
-            "description": "Saga historique en cinq tomes racontant près de mille ans d'histoire européenne à travers le prieuré d'Oelenberg en Alsace.",
-            "url": "https://oelenberg.fr/"
-          },
-          {
-            "@type": "Book",
-            "name": "Tome 1 : L'Année du Pape",
-            "isPartOf": { "@id": "https://oelenberg.fr/#series" },
-            "author": { "@type": "Person", "name": "Paul Silène" },
-            "bookFormat": "https://schema.org/Paperback",
-            "inLanguage": "fr",
-            "image": "https://oelenberg.fr/assets/Y12_resultat.webp",
-            "offers": {
-              "@type": "Offer",
-              "price": "18.00",
-              "priceCurrency": "EUR",
-              "availability": "https://schema.org/InStock",
-              "url": "https://www.vinted.fr/items/10136131139-les-chroniques-doelenberg-tome-1-lannee-du-pape"
-            }
-          },
-          {
-            "@type": "Book",
-            "name": "Tome 2 : Les Croisades et la Lumière",
-            "isPartOf": { "@id": "https://oelenberg.fr/#series" },
-            "author": { "@type": "Person", "name": "Paul Silène" },
-            "bookFormat": "https://schema.org/Paperback",
-            "inLanguage": "fr",
-            "image": "https://oelenberg.fr/assets/Y5BIS_resultat.webp",
-            "offers": {
-              "@type": "Offer",
-              "price": "18.00",
-              "priceCurrency": "EUR",
-              "availability": "https://schema.org/PreOrder",
-              "url": "https://book.stripe.com/7sYcN45Vc2PQ9zw15N87K0b"
-            }
-          },
-          {
-            "@type": "Product",
-            "name": "Série complète : Les 5 Tomes — Les Chroniques d'Oelenberg",
-            "description": "Intégrale des cinq tomes de la saga historique Les Chroniques d'Oelenberg par Paul Silène.",
-            "brand": { "@type": "Brand", "name": "Les Chroniques d'Oelenberg" },
-            "offers": [
-              {
-                "@type": "Offer",
-                "name": "Édition Standard (5 Tomes)",
-                "price": "85.00",
-                "priceCurrency": "EUR",
-                "availability": "https://schema.org/PreOrder",
-                "url": "https://buy.stripe.com/6oUaEW3N4aiidPMaGn87K04"
-              },
-              {
-                "@type": "Offer",
-                "name": "Édition Prestige reliée (5 Tomes)",
-                "price": "150.00",
-                "priceCurrency": "EUR",
-                "availability": "https://schema.org/PreOrder",
-                "url": "https://buy.stripe.com/eVq7sKdnEduudPM29R87K05"
-              }
-            ]
-          }
-        ]
+        "@type": "BookSeries",
+        "@id": "https://oelenberg.fr/#series",
+        "name": "Les Chroniques d'Oelenberg",
+        "author": {
+          "@type": "Person",
+          "name": "Paul Silène"
+        },
+        "genre": "Roman historique",
+        "inLanguage": "fr",
+        "description": "Saga historique en cinq tomes racontant près de mille ans d'histoire européenne à travers le prieuré d'Oelenberg en Alsace.",
+        "url": "https://oelenberg.fr/"
       }
     </script>
 
@@ -143,360 +76,43 @@
   <body>
     <header>
       <div class="logo">Patrimoine Chrétien Vivant</div>
-
       <button class="burger-menu" aria-label="Ouvrir le menu">☰</button>
-
       <nav>
         <ul>
-          <li>
-            <a href="#accueil" class="nav-link active" data-target="accueil"
-              >Accueil</a
-            >
-          </li>
-          <li>
-            <a href="#saga" class="nav-link" data-target="saga">La Saga</a>
-          </li>
-          <li>
-            <a href="#symbole" class="nav-link" data-target="symbole"
-              >Le Symbole</a
-            >
-          </li>
-          <li>
-            <a href="#boutique" class="nav-link" data-target="boutique"
-              >Boutique</a
-            >
-          </li>
-          <li>
-            <a href="#association" class="nav-link" data-target="association"
-              >L'Association</a
-            >
-          </li>
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="saga.html">La Saga</a></li>
+          <li><a href="symbole.html">Le Symbole</a></li>
+          <li><a href="boutique.html">Boutique</a></li>
+          <li><a href="association.html">L'Association</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="accueil" class="page active">
+      <section class="page">
         <div class="hero">
           <div class="hero-text">
             <h1>Les Chroniques d'Oelenberg</h1>
             <p class="subtitle">
               Mille ans d'histoire à travers la lumière d'un lieu sacré.
             </p>
-
             <p>
               Les Chroniques d'Oelenberg racontent près de mille ans d'histoire
               à travers le prisme d'un lieu sacré : le prieuré d'Oelenberg en
-              Alsace. C'est une saga qui montre comment la foi, l'art, et
+              Alsace. C'est une saga qui montre comment la foi, l'art et
               l'humanité survivent aux pires catastrophes.
             </p>
+            <br />
+            <a href="saga.html" class="btn">Découvrir la saga</a>
+            <a href="boutique.html" class="btn btn-prestige"
+              >Accéder à la boutique</a
+            >
           </div>
           <div class="hero-image">
             <img
               src="assets/test.webp"
               alt="Le prieuré d'Oelenberg en Alsace — Les Chroniques d'Oelenberg"
             />
-          </div>
-        </div>
-      </section>
-
-      <section id="saga" class="page">
-        <h2>L'Histoire à travers les Âges</h2>
-        <div class="intro-saga">
-          <p>
-            Chaque tome explore une période cruciale de l'histoire européenne,
-            montrant comment les individus, la foi, et la communauté traversent
-            les bouleversements historiques.
-          </p>
-        </div>
-
-        <div class="grid">
-          <div class="card">
-            <img
-              src="assets/Y12_resultat.webp"
-              alt="Couverture du Tome 1 des Chroniques d'Oelenberg : Fondation"
-              loading="lazy"
-            />
-            <h3>Tome I : Fondation</h3>
-
-            <p><strong>Période :</strong> XIe siècle.</p>
-
-            <p>
-              Quatre hommes brisés arrivent au prieuré naissant d'Oelenberg et
-              trouvent la rédemption à travers la construction, l'art, et la
-              foi.
-            </p>
-          </div>
-          <div class="card">
-            <img
-              src="assets/Y5BIS_resultat.webp"
-              alt="Couverture du Tome 2 des Chroniques d'Oelenberg : Épreuve"
-              loading="lazy"
-            />
-            <h3>Tome II : Épreuve</h3>
-
-            <p><strong>Thème :</strong> Foi et violence.</p>
-
-            <p>
-              Durant les Première et Deuxième Croisades, tension entre l'idéal
-              chrétien et la réalité des croisades.
-            </p>
-          </div>
-          <div class="card">
-            <img
-              src="assets/Y7_resultat.webp"
-              alt="Village alsacien pendant la Guerre de Trente Ans — Tome 3 Survie"
-              loading="lazy"
-            />
-            <h3>Tome III : Survie</h3>
-
-            <p><strong>Thème :</strong> Humanité dans la barbarie.</p>
-
-            <p>
-              Pendant la Guerre de Trente Ans, survie et humanité au milieu de
-              la barbarie, œcuménisme face au fanatisme.
-            </p>
-          </div>
-          <div class="card">
-            <img
-              src="assets/Y3_resultat.webp"
-              alt="Alsace entre Révolution française et Empire — Tome 4 Identité"
-              loading="lazy"
-            />
-            <h3>Tome IV : Identité</h3>
-
-            <p><strong>Thème :</strong> Entre deux mondes.</p>
-
-            <p>
-              De la Révolution française à la Guerre franco-prussienne, l'Alsace
-              comme terre déchirée.
-            </p>
-          </div>
-          <div class="card">
-            <img
-              src="assets/Y4_resultat.webp"
-              alt="Moine contemporain à l'abbaye d'Oelenberg — Tome 5 Renaissance"
-              loading="lazy"
-            />
-            <h3>Tome V : Renaissance</h3>
-
-            <p><strong>Thème :</strong> Mémoire et avenir.</p>
-
-            <p>
-              Traversant les guerres mondiales jusqu'au monde contemporain,
-              mémoire, réconciliation, renaissance spirituelle dans un monde
-              sécularisé.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="symbole" class="page">
-        <div class="split">
-          <div class="text-content">
-            <h2>Le Vitrail de Thiébaud</h2>
-            <p class="subtitle">Symbole de continuité et de beauté divine.</p>
-
-            <p>
-              Présent dans tous les tomes de la saga, ce vitrail créé lors de la
-              fondation traverse les époques pour nous rappeler que la lumière
-              persiste, même au cœur des ténèbres.
-            </p>
-
-            <h3>L'Art du Vitrail : Lumière et Transmission</h3>
-            <p>
-              Né dans l'Antiquité et magnifié au Moyen Âge, le vitrail est une
-              "théologie de la lumière". Les maîtres verriers utilisaient des
-              oxydes métalliques pour colorer le verre soufflé, assemblant
-              ensuite ces éclats par des résilles de plomb.
-            </p>
-            <p>
-              Au-delà de la prouesse technique, le vitrail servait de catéchisme
-              visuel, racontant les Écritures à ceux qui ne savaient lire. Il
-              transforme la lumière brute en une présence spirituelle, une
-              méditation sur la mémoire et la résilience qui définit l'esprit
-              d'Oelenberg.
-            </p>
-          </div>
-          <div class="image-content">
-            <img
-              src="assets/Y9_resultat.webp"
-              alt="Le vitrail de Thiébaud au prieuré d'Oelenberg"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="boutique" class="page">
-        <h2>La Boutique du Prieuré</h2>
-        <p class="subtitle">
-          Soutenez notre histoire en acquérant les ouvrages.
-        </p>
-        <div class="shop-grid">
-          <div class="product">
-            <img
-              src="assets/Y12_resultat.webp"
-              alt="Livre Tome 1 : L'Année du Pape — Les Chroniques d'Oelenberg"
-              loading="lazy"
-            />
-            <h3>Tome 1 : L'Année du Pape</h3>
-            <br />
-            <p class="price">18,00 €</p>
-            <a
-              href="https://www.vinted.fr/items/10136131139-les-chroniques-doelenberg-tome-1-lannee-du-pape"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn"
-              >Commander</a
-            >
-          </div>
-          <div class="product">
-            <img
-              src="assets/Y5BIS_resultat.webp"
-              alt="Livre Tome 2 : Les Croisades et la Lumière — Les Chroniques d'Oelenberg"
-              loading="lazy"
-            />
-            <h3>Tome 2 : Les Croisades et la Lumière</h3>
-            <p class="price">18,00 €</p>
-            <a
-              href="https://book.stripe.com/7sYcN45Vc2PQ9zw15N87K0b"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn"
-              >Réserver</a
-            >
-          </div>
-
-          <div class="product upcoming">
-            <h3>À paraître prochainement</h3>
-            <ul class="upcoming-list">
-              <li>
-                <strong>Tome III :</strong> La Guerre de Trente Ans (1618-1648)
-              </li>
-              <li><strong>Tome IV :</strong> Les révolutions (1789-1871)</li>
-              <li>
-                <strong>Tome V :</strong> Les deux Guerres et La Renaissance
-                (1914-Auj.)
-              </li>
-            </ul>
-            <p class="price note">En cours d'écriture</p>
-          </div>
-
-          <div class="product">
-            <h3>Série complète : Les 5 Tomes</h3>
-            <p class="price">85,00 €</p>
-            <a
-              href="https://buy.stripe.com/6oUaEW3N4aiidPMaGn87K04"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn"
-              >Réserver (85 €)</a
-            >
-          </div>
-
-          <div class="product prestige">
-            <h3>Série complète : Édition Prestige</h3>
-            <p class="description-luxe">
-              Une édition reliée de collection pour les passionnés.
-            </p>
-            <p class="price">150,00 €</p>
-            <a
-              href="https://buy.stripe.com/eVq7sKdnEduudPM29R87K05"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-prestige"
-              >Réserver l'Édition Prestige</a
-            >
-          </div>
-
-          <div class="product donation">
-            <h3>Soutenir l'auteur</h3>
-            <p>
-              Aidez-moi à financer la recherche, l'écriture et l'édition des
-              prochains tomes.
-            </p>
-            <a
-              href="https://donate.stripe.com/00w7sKcjAgGGfXUeWD87K07"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-don"
-              >Faire un don libre</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section id="association" class="page">
-        <h2>Rejoignez l'Association "Patrimoine Chrétien Vivant"</h2>
-        <p class="subtitle">
-          Une association pour préserver la mémoire et la lumière de nos
-          monastères et abbayes.
-        </p>
-
-        <div class="contact-container">
-          <div class="contact-info">
-            <img
-              src="assets/chapelle_resultat.webp"
-              alt="Chapelle du prieuré d'Oelenberg — Association Patrimoine Chrétien Vivant"
-              loading="lazy"
-            />
-            <p>
-              En rejoignant notre association, vous participez activement à la
-              sauvegarde de notre patrimoine commun et à la diffusion des
-              Chroniques.
-            </p>
-          </div>
-
-          <form
-            class="contact-form"
-            name="inscription-amis"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            action="/merci.html"
-          >
-            <input type="hidden" name="form-name" value="inscription-amis" />
-
-            <p class="hidden">
-              <label
-                >Ne pas remplir ce champ si vous êtes humain :
-                <input name="bot-field"
-              /></label>
-            </p>
-
-            <div class="form-group">
-              <label for="nom">Nom et Prénom :</label>
-              <input type="text" id="nom" name="nom" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Adresse E-mail :</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Vos motivations ou questions :</label>
-              <textarea id="message" name="message" rows="4"></textarea>
-            </div>
-            <button type="submit" class="btn">Envoyer ma demande</button>
-          </form>
-        </div>
-
-        <div class="container-association">
-          <div class="card-association">
-            <h3>Soutenez le Patrimoine</h3>
-            <p>
-              Découvrez les actions de l'association
-              <strong>Patrimoine Chrétien Vivant</strong> et participez à la
-              préservation de ces lieux remarquables.
-            </p>
-            <a
-              href="https://patrimoine-chretien-vivant.netlify.app"
-              class="btn-association"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Aller sur le site de l'Association →
-            </a>
           </div>
         </div>
       </section>
