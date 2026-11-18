@@ -3,53 +3,41 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://oelenberg.fr/</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    
-    <!-- Images de la page d'accueil et de la saga -->
+
     <image:image>
       <image:loc>https://oelenberg.fr/assets/test.webp</image:loc>
-      <image:title>Le Prieuré d'Oelenberg</image:title>
+      <image:title>Le prieuré d'Oelenberg en Alsace — Les Chroniques d'Oelenberg</image:title>
     </image:image>
     <image:image>
       <image:loc>https://oelenberg.fr/assets/Y12_resultat.webp</image:loc>
-      <image:title>Tome 1 : Fondation</image:title>
+      <image:title>Tome 1 : Fondation — Les Chroniques d'Oelenberg</image:title>
     </image:image>
     <image:image>
       <image:loc>https://oelenberg.fr/assets/Y5BIS_resultat.webp</image:loc>
-      <image:title>Tome 2 : Épreuve</image:title>
+      <image:title>Tome 2 : Épreuve — Les Chroniques d'Oelenberg</image:title>
     </image:image>
     <image:image>
       <image:loc>https://oelenberg.fr/assets/Y7_resultat.webp</image:loc>
-      <image:title>Village alsacien</image:title>
+      <image:title>Tome 3 : Survie — Guerre de Trente Ans en Alsace</image:title>
     </image:image>
     <image:image>
       <image:loc>https://oelenberg.fr/assets/Y3_resultat.webp</image:loc>
-      <image:title>Personnage historique</image:title>
+      <image:title>Tome 4 : Identité — L'Alsace de la Révolution à 1871</image:title>
     </image:image>
     <image:image>
       <image:loc>https://oelenberg.fr/assets/Y4_resultat.webp</image:loc>
-      <image:title>Moine contemporain</image:title>
+      <image:title>Tome 5 : Renaissance — Abbaye d'Oelenberg contemporaine</image:title>
     </image:image>
-    
-    <!-- Image du vitrail -->
     <image:image>
       <image:loc>https://oelenberg.fr/assets/Y9_resultat.webp</image:loc>
-      <image:title>Vitrail de Thiébaud</image:title>
+      <image:title>Le vitrail de Thiébaud au prieuré d'Oelenberg</image:title>
     </image:image>
-    
-    <!-- Image de l'association -->
     <image:image>
       <image:loc>https://oelenberg.fr/assets/chapelle_resultat.webp</image:loc>
-      <image:title>L'Érudit</image:title>
+      <image:title>Chapelle du prieuré d'Oelenberg — Patrimoine Chrétien Vivant</image:title>
     </image:image>
-
-    <!-- Nouvelle image : Épée -->
-    <image:image>
-      <image:loc>https://oelenberg.fr/assets/epee_resultat.webp</image:loc>
-      <image:title>Épée plantée dans la pierre</image:title>
-    </image:image>
-    
   </url>
 </urlset>

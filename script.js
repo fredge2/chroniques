@@ -4,38 +4,45 @@ document.addEventListener("DOMContentLoaded", () => {
   const burgerBtn = document.querySelector(".burger-menu");
   const nav = document.querySelector("nav");
 
-  // 1. LE MENU MOBILE (Ouvrir / Fermer)
+  function showSection(targetId) {
+    const targetSection = document.getElementById(targetId);
+    if (!targetSection) return;
+
+    navLinks.forEach((navItem) => {
+      navItem.classList.toggle(
+        "active",
+        navItem.getAttribute("data-target") === targetId,
+      );
+    });
+
+    pages.forEach((page) => page.classList.remove("active"));
+    targetSection.classList.add("active");
+  }
+
+  // 1. MENU MOBILE
   if (burgerBtn) {
     burgerBtn.addEventListener("click", () => {
       nav.classList.toggle("active-menu");
     });
   }
 
-  // 2. LA NAVIGATION ENTRE LES SECTIONS
+  // 2. NAVIGATION ENTRE LES SECTIONS
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
-
-      // On désactive la surbrillance sur tous les liens
-      navLinks.forEach((navItem) => navItem.classList.remove("active"));
-      // On cache toutes les sections
-      pages.forEach((page) => page.classList.remove("active"));
-
-      // On active le lien cliqué
-      this.classList.add("active");
-
-      // On affiche la bonne section
       const targetId = this.getAttribute("data-target");
-      const targetSection = document.getElementById(targetId);
-      
-      if (targetSection) {
-        targetSection.classList.add("active");
-      }
+      showSection(targetId);
+      history.replaceState(null, "", `#${targetId}`);
 
-      // 3. FERMETURE AUTO (Si on est sur mobile, on referme le menu après avoir cliqué)
       if (window.innerWidth <= 900) {
         nav.classList.remove("active-menu");
       }
     });
   });
+
+  // 3. OUVERTURE DIRECTE VIA ANCRE DANS L'URL (#boutique, #saga...)
+  const initialHash = window.location.hash.replace("#", "");
+  if (initialHash) {
+    showSection(initialHash);
+  }
 });
